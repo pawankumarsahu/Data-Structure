@@ -162,7 +162,7 @@ int main(){
                 break;
             
             case 9:
-                system("clear");
+                system("clear"); // Change clear with cls if you are using Windows OS
                 break;
 
             default:
