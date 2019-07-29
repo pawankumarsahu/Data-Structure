@@ -71,6 +71,14 @@ class Queue{
             return temp;
         }
 
+    
+        //to display all the available elements in queue
+        void display(){
+            for(int i = 0; i <= 4; i++){
+                std::cout << arr[i] << " ";
+            }
+        }
+    
         // to check total elements available in queue
         int size(){
             return ((rear + 1) - front);
@@ -95,7 +103,8 @@ int main(){
         std::cout << "3: isEmpty()" << std::endl;
         std::cout << "4: isFull()" << std::endl;
         std::cout << "5: Size()" << std::endl;
-        std::cout << "6: Clear Screen" << std::endl;
+        std::cout << "6: Display()" << std::endl;
+        std::cout << "7: Clear Screen" << std::endl;
 
         std::cout << "Enter your option here: ";
         std::cin >> option;
@@ -130,8 +139,11 @@ int main(){
             case 5:
                 std::cout << "Total number of item in queue are: " << queue_1.size() << std::endl;
                 break;
-            
+                
             case 6:
+                queue_1.display();
+            
+            case 7:
                 system("clear"); // change "clear" with "cls" if you are using Windows OS
                 break;
 
@@ -140,4 +152,5 @@ int main(){
         }
 
     } while(option != 0);
+    return 0;
 }
